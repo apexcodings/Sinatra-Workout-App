@@ -52,6 +52,7 @@ class UsersController < ApplicationController
   get '/users/:id' do
     if Helpers.is_logged_in?(session) && User.find_by(id: params[:id])
     @user = User.find_by(id: params[:id])
+    @workouts = @user.workouts
     else 
       redirect to '/'
     end 
