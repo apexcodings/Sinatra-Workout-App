@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  use Rack::Flash
+
   get '/signup' do 
     erb :'users/signup'
   end
@@ -17,8 +19,8 @@ class UsersController < ApplicationController
     else 
       redirect to '/signup'
       # Add alert here 
+      # flash[:notice] = "User login failed, please ..."
     end
-
   end
 
   post '/users' do 
