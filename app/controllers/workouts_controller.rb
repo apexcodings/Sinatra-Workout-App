@@ -15,6 +15,7 @@ class WorkoutsController < ApplicationController
     workout.user = user 
     workout.save 
     redirect to "/users/#{user.id}"
+    end
   end
 
   get '/workouts/:id' do 

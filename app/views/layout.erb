@@ -3,10 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Home Workouts</title>
 </head>
 <body>
-
+   <% if Helpers.is_logged_in?(session) %>
+        <p><a href="/logout">Log Out</a></p>
+        <p><a href="/users/<%=Helpers.current_user(session).id if Helpers.is_logged_in?(session)%>">My Workouts</a></p>
+        <p><a href="/workouts/new">New Workout</a></p>
+        <p><a href="#">All Workouts</a></p>
+        <p><a href="/users">All Users</a></p>
+  <%end%>
   <%= yield %>
 </body>
 </html>
+
