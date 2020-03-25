@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
 
+  get '/users' do 
+    @users = User.all 
+
+    erb :'users/index'
+  end
+
   get '/signup' do 
     if Helpers.is_logged_in?(session) 
       user = Helpers.current_user(session)
@@ -48,6 +54,8 @@ class UsersController < ApplicationController
     erb :'users/show'
   end
 
- 
+  get '/logout' do 
+    
+  end
 
 end
