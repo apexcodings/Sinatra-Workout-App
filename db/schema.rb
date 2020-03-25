@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200323231331) do
+ActiveRecord::Schema.define(version: 20200325153330) do
 
   create_table "equipments", force: :cascade do |t|
     t.string  "name"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20200323231331) do
     t.string  "description"
     t.string  "instructions"
     t.string  "workout_time"
-    t.string  "exoerience_needed"
+    t.string  "experience_needed"
     t.string  "equipment_needed"
     t.integer "user_id"
   end
