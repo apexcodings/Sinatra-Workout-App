@@ -10,6 +10,11 @@ class ApplicationController < Sinatra::Base
 
 
   get "/" do
+    if Helpers.is_logged_in?(session)
+      user = Helpers.current_user(session)
+      redirect to "/users/#{user.id}"
+    end
+
     erb :welcome
   end
 
