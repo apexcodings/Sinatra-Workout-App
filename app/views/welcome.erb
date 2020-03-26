@@ -1,4 +1,23 @@
-<div id="welcome"class="container bg-dark float-none">
-    <h1 class="text-white pt-5">Welcome to the Workout Locator App</h1>
-    <h3 id="login" class="text-white">Please <a href="/signup">Sign Up</a> or <a href="/login">Log In</a></h3>
+<div class="container">
+<p>Workout App</p>
+<section>
+  <form id="logIn" action="/login" method="post">
+    <label>Username: </label>
+    <input type="text" name="username">
+    <label>Password: </label>
+    <input type="password" name="password">
+    <button type="submit">Log In</button>
+  </form>
+  <hr>
+  <form id="signUp" action="/users" method="post">
+    <label>Username:</label>
+    <input type="text" name="username">
+    <label>Email: </label>
+    <input type="email" name="email">
+    <label>Password: </label>
+    <input type="password" name="password">
+    <button type="submit">Sign Up</button>
+  </form>
+</section>
+
 </div>
