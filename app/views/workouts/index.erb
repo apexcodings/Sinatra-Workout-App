@@ -1,0 +1,11 @@
+<h1>Workouts</h1>
+
+
+<ul>
+<% @workouts.each do |workout| %>
+<li><a href="/workouts/<%=workout.id%>"><%= workout.name %></a></li>
+
+
+
+<% end  %>
+</ul>

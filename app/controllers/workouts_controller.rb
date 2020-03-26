@@ -1,5 +1,12 @@
 class WorkoutsController < ApplicationController
 
+
+  get '/workouts' do 
+    @workouts = Workout.all 
+
+    erb :'workouts/index'
+  end
+
   get '/workouts/new' do 
     if !Helpers.is_logged_in?(session)
       redirect '/'

@@ -12,7 +12,7 @@
    <nav class="navbar navbar-dark bg-primary">
         <a class="navbar-brand" href="/users/<%=Helpers.current_user(session).id if Helpers.is_logged_in?(session)%>">My Workouts</a>
         <a class="navbar-brand" href="/workouts/new">New Workout</a>
-        <a class="navbar-brand" href="#">All Workouts</a>
+        <a class="navbar-brand" href="/workouts">All Workouts</a>
         <a class="navbar-brand" href="/users">All Users</a>
         <a class="navbar-brand" href="/logout">Log Out</a>
     </nav>

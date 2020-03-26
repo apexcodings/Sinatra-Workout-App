@@ -34,8 +34,7 @@ class UsersController < ApplicationController
       redirect to "/users/#{user.id}"
     else 
       redirect to '/signup'
-      # Add alert here 
-      # flash[:notice] = "User login failed, please ..."
+    #  flash[:error] = "You need to be logged in!"
     end
   end
 
