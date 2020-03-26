@@ -3,5 +3,8 @@
 
 
 
+<% if Helpers.current_user(session) == @workout.user %>
 
 <a href="/workouts/<%=workout.id%>/edit">Edit Workout</a>
+
+<% end %>
