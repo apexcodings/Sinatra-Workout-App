@@ -5,7 +5,7 @@
 
 <% if Helpers.current_user(session) == @workout.user %>
 
-<a href="/workouts/<%=workout.id%>/edit">Edit Workout</a>
+<a href="/workouts/<%=@workout.id%>/edit">Edit Workout</a>
 
 <form action="/workouts/<%=@workout.id%>/delete" method="post">
 <input type="hidden" name="_method" value="delete">

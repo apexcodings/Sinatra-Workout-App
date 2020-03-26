@@ -43,7 +43,7 @@ class WorkoutsController < ApplicationController
     erb :'/workouts/edit'
   end
 
-  patch '/workouts/;id' do 
+  patch '/workouts/:id' do 
     workout = Workout.find_by(id: params[:id])
     if workout && workout.user == Helpers.current_user(session) 
       workout.update(params[:workout])
