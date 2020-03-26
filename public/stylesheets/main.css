@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background-image: url(../images/workout_background.jpg);
   background-size: cover;
@@ -9,6 +10,7 @@ body {
   height: 100vh;
   width: 100vw;
 }
+
 .container {
   display: flex;
   height: 100vh;
@@ -35,18 +37,23 @@ section {
   color: white;
   border: solid 1px #212529;
   border-radius: 10%;
+  opacity: 0.9;
 }
+
 hr {
   width: 100%;
 }
+
 #logIn,
 #signUp {
   text-align: center;
 }
+
 input {
   margin-bottom: 0.2rem;
   width: 100%;
 }
+
 button {
   width: 100%;
 }
