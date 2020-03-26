@@ -53,4 +53,12 @@ class WorkoutsController < ApplicationController
     end 
   end
 
+  delete '/workouts/:id/delete' do 
+    workout = Workout.find_by(id: params[:id])
+    if workout && workout.user == Helpers.current_user(session) 
+      workout.destroy 
+    end
+    redirect to '/workouts'
+  end
+
 end

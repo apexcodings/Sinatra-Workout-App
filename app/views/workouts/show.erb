@@ -7,4 +7,9 @@
 
 <a href="/workouts/<%=workout.id%>/edit">Edit Workout</a>
 
+<form action="/workouts/<%=@workout.id%>/delete" method="post">
+<input type="hidden" name="_method" value="delete">
+<input type="submit" value="Delete Recipe">
+</form>
+
 <% end %>
