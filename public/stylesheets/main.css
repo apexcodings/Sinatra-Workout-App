@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   background-image: url(../images/workout_background.jpg);
   background-size: cover;
@@ -10,19 +9,24 @@ body {
   height: 100vh;
   width: 100vw;
 }
-
 .container {
   display: flex;
   height: 100vh;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   width: auto;
+  align-items: center;
+}
+
+#appName {
+  color: white;
+  font-size: 90px;
+  font-weight: bold;
 }
 
 section {
   background: #212529;
   height: fit-content;
-  /* margin-top: 50%; */
   width: 25%;
   padding: 2rem;
   display: flex;
@@ -40,10 +44,9 @@ hr {
   text-align: center;
 }
 input {
-  margin: 0.2rem;
+  margin-bottom: 0.2rem;
   width: 100%;
 }
-
 button {
   width: 100%;
 }
