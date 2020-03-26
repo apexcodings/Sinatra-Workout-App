@@ -15,30 +15,33 @@ body {
   display: flex;
   height: 100vh;
   justify-content: center;
+  flex-direction: row;
   width: auto;
 }
 
 section {
   background: #212529;
-  height: 50%;
-  margin-top: 25vh;
+  height: fit-content;
+  /* margin-top: 50%; */
   width: 25%;
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   font-family: Arial;
-  justify-content: space-between;
   color: white;
+  border: solid 1px #212529;
+  border-radius: 10%;
 }
 hr {
   width: 100%;
 }
 #logIn,
 #signUp {
-  text-align: right;
+  text-align: center;
 }
 input {
   margin: 0.2rem;
+  width: 100%;
 }
 
 button {
