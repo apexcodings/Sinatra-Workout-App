@@ -2,3 +2,15 @@ body {
   background-image: url(../images/workout_background.jpg);
   background-size: cover;
 }
+
+#welcome {
+  margin-top: 25vh;
+  width: 25vw;
+  height: 33vh;
+  text-align: center;
+  border-radius: 10%;
+}
+
+#login {
+  padding-top: 5vh;
+}
