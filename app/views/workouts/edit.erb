@@ -1,0 +1,19 @@
+<h1>Edit Recipe</h1>
+
+<form action="/workouts/<%=@workout.id%>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label >Name: </label>
+  <input type="text" name="name" value="<%=@workout.name%>"> <br>
+  <label > Description: </label>
+  <input type="text" name="description" value="<%=@workout.description%>"> <br>
+  <label >Instructions: </label>
+  <input row="12" cols="12" type="text" name="instructions" value="<%=@workout.description%>"><br>
+  <label >Workout Time: </label>
+  <input type="text" name="workout_time" value="<%=@workout.workout_time%>"> <br>
+  <label >Experience Needed: </label>
+  <input type="text" name="experience_needed" value="<%=@workout.experience_needed%>"> <br>
+  <label >Equipment Needed: </label>
+  <input type="text" name="equipment_needed" value="<%=@workout.equipment_needed%>"> <br>
+  <input type="submit" value="Edit Workout">
+
+</form>
