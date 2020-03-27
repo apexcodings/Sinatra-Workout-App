@@ -24,6 +24,8 @@ body {
   color: coral;
   font-size: 90px;
   font-weight: bold;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
 }
 
 section {
@@ -61,4 +63,10 @@ input {
 #logo {
   color: coral;
   padding-left: 1rem;
+}
+#toggle {
+  width: auto;
+}
+#name {
+  color: coral;
 }
