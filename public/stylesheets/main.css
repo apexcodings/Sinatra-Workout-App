@@ -54,6 +54,11 @@ input {
   width: 100%;
 }
 
-button {
+#submit {
   width: 100%;
+}
+
+i {
+  color: coral;
+  padding-left: 0.2rem;
 }
