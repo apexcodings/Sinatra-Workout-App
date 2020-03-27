@@ -64,9 +64,14 @@ input {
   color: coral;
   padding-left: 1rem;
 }
+
 #toggle {
   width: auto;
 }
 #name {
   color: coral;
+}
+
+#heading {
+  margin-top: 20%;
 }
