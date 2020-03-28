@@ -5,7 +5,7 @@
 
 <ul id="bullets">
 <% @workouts.each do |workout| %>
-<li id="display"><a href="/workouts/<%=workout.id%>"><%= workout.name %></a>
+<li id="display"><a id="title" href="/workouts/<%=workout.id%>"><%= workout.name %></a>
 <p>Workout Description: <%= workout.description %> </p>
 <p>Workout Time: <%= workout.workout_time %> </p>
 <p>Experience Needed: <%= workout.experience_needed %> </p>
