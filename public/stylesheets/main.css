@@ -116,3 +116,13 @@ label {
   height: 200px;
   width: 100%;
 }
+
+#display {
+  background-color: coral;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}

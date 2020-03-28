@@ -1,8 +1,20 @@
-<h3><%= @user.username %></h3>
+<div id="workoutFormContainer">
 
-<ul>
+
+<h3 id="heading"><%= @user.username %> - My Workouts</h3>
+
+<ul id="bullets">
 <% @workouts.each do |workout| %>
-<li><a href="/workouts/<%=workout.id%>"><%= workout.name %></a></li>
+<li id="display"><a href="/workouts/<%=workout.id%>"><%= workout.name %></a>
+<p>Workout Description: <%= workout.description %> </p>
+<p>Workout Time: <%= workout.workout_time %> </p>
+<p>Experience Needed: <%= workout.experience_needed %> </p>
+<p>Equipment Needed: <%= workout.equipment_needed %> </p>
+
+</li>
 
 <% end %>
 </ul>
+
+
+</div>
