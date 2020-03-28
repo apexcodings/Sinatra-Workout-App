@@ -1,8 +1,15 @@
-<h3>All Users</h3>
+<div id="workoutFormContainer">
 
+
+<h3 id="heading">All Users</h3>
+
+<ul id="bullets">
 <% @users.each do |user|  %>
-
-<p><a href="/users/<%=user.id%>"> <%= user.username.titleize %>  </a></p>
-
+<li id="display">
+<p><a id="title" href="/users/<%=user.id%>"> <%= user.username.titleize %>  </a></p>
+<p>Experience Level: <%= user.experience_level %></p>
+</li>
 
 <% end %>
+</ul>
+</div>

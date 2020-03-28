@@ -10,6 +10,13 @@ class UsersController < ApplicationController
     erb :'users/index'
   end
 
+  get '/profile' do 
+    if Helpers.is_logged_in?(session)
+      @user = Helpers.current_user(session)
+    end
+    erb :'users/profile'
+  end
+
   get '/signup' do 
     if Helpers.is_logged_in?(session) 
       user = Helpers.current_user(session)
@@ -61,6 +68,32 @@ class UsersController < ApplicationController
   get '/logout' do 
     session.clear 
     redirect to '/'
+  end
+
+  get 'users/:id/edit' do
+    @workout = Workout.find_by(id: params[:id]) 
+    if !Helpers.is_logged_in?(session) || !@workout || @workout.user != Helpers.current_user(session) 
+      redirect '/'
+    end
+    erb :'/workouts/edit'
+  end
+
+  patch '/users/:id' do 
+    workout = Workout.find_by(id: params[:id])
+    if workout && workout.user == Helpers.current_user(session) 
+      workout.update(params[:workout])
+      redirect to "/workouts/#{workout.id}"
+    else 
+      redirect to "/workouts"
+    end 
+  end
+
+  delete '/users/:id/delete' do 
+    workout = Workout.find_by(id: params[:id])
+    if workout && workout.user == Helpers.current_user(session) 
+      workout.destroy 
+    end
+    redirect to '/workouts'
   end
 
 end

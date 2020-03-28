@@ -1,0 +1,29 @@
+<div id="workoutFormContainer">
+
+
+<h3 id="heading"><%= @user.username %> - My Profile</h3>
+
+<ul id="bullets">
+<li id="display">
+<p>Email: <%= @user.email %></p>
+<p>Experience Level: <%= @user.experience_level %></p>
+<p>Age: <%= @user.age %></p>
+<p>Height: <%= @user.height %></p>
+<p>Weight: <%= @user.weight %></p>
+<p>Location: <%= @user.location %></p>
+</li>
+</ul>
+
+
+<% if Helpers.current_user(session) == @user %>
+
+<a href="/profiles/<%=@user.id%>/edit"><button id="edit">Edit Profile</button></a>
+
+<form href="/profiles/<%=@user.id%>/delete" method="post">
+<input type="hidden" name="_method" value="delete">
+<input id="delete" type="submit" value="Delete Profile">
+</form>
+
+<% end %>
+
+</div>
