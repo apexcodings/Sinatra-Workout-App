@@ -1,13 +1,18 @@
-<h1>Edit Recipe</h1>
+<div id="workoutFormContainer">
 
+
+<h3 id="heading">Edit Workout</h3>
+
+<div class="container">
+<section>
 <form action="/workouts/<%=@workout.id%>" method="post">
   <input type="hidden" name="_method" value="patch">
   <label >Name: </label>
   <input type="text" name="workout[name]" value="<%=@workout.name%>"> <br>
   <label > Description: </label>
   <input type="text" name="workout[description]" value="<%=@workout.description%>"> <br>
-  <label >Instructions: </label>
-  <input type="text" name="workout[instructions]" value="<%=@workout.description%>"><br>
+  <label >Instructions: </label> <br>
+  <textarea id="instructions" type="text" name="workout[instructions]" value="<%=@workout.description%>"></textarea><br>
   <label >Workout Time: </label>
   <input type="text" name="workout[workout_time]" value="<%=@workout.workout_time%>"> <br>
   <label >Experience Needed: </label>
@@ -17,3 +22,6 @@
   <input type="submit" value="Edit Workout">
 
 </form>
+</section>
+</div>
+</div>

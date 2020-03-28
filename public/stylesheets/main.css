@@ -11,7 +11,7 @@ body {
   width: 100vw;
 }
 
-.container {
+#homePageContainer {
   display: flex;
   height: 100vh;
   justify-content: space-between;
@@ -28,7 +28,7 @@ body {
   -webkit-text-stroke-color: black;
 }
 
-section {
+#homePageForm {
   background: #212529;
   height: fit-content;
   width: 25%;
@@ -72,6 +72,47 @@ input {
   color: coral;
 }
 
+@media (max-width: 765px) {
+  #heading {
+    font-size: 20px;
+  }
+}
+
 #heading {
-  margin-top: 20%;
+  color: coral;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+#workoutFormContainer {
+  background: #212529;
+  width: 50vw;
+  height: 80vh;
+  margin-top: 10vh;
+  border: solid 1px black;
+  border-radius: 10%;
+  opacity: 0.9;
+  position: absolute;
+  margin-left: 25vw;
+}
+
+@media (max-width: 765px) {
+  label {
+    color: white;
+    display: block;
+    text-align: center;
+  }
+}
+
+label {
+  color: white;
+}
+
+#addButton {
+  margin-top: 1rem;
+}
+
+#instructions {
+  height: 200px;
+  width: 100%;
 }
