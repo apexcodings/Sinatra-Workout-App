@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   get '/signup' do 
     if Helpers.is_logged_in?(session) 
       user = Helpers.current_user(session)
-      redirect to "/users/#{user.id}"
+      redirect to "/home"
     end
     erb :'users/signup'
   end
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   get '/login' do 
     if Helpers.is_logged_in?(session) 
       user = Helpers.current_user(session)
-      redirect to "/users/#{user.id}"
+      redirect to "/home"
     end
     erb :'users/login'
   end
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 
     if user  && user.authenticate(params[:password])
       session[:user_id] = user.id 
-      redirect to "/users/#{user.id}"
+      redirect to "/home"
     else 
       redirect to '/signup'
     #  flash[:error] = "You need to be logged in!"
@@ -71,8 +71,8 @@ class UsersController < ApplicationController
   end
 
   get 'users/:id/edit' do
-    @workout = Workout.find_by(id: params[:id]) 
-    if !Helpers.is_logged_in?(session) || !@workout || @workout.user != Helpers.current_user(session) 
+    @user = User.find_by(id: params[:id]) 
+    if !Helpers.is_logged_in?(session) || !@user || @user != Helpers.current_user(session) 
       redirect '/'
     end
     erb :'/workouts/edit'

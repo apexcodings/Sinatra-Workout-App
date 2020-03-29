@@ -23,6 +23,9 @@
       <a class="navbar-brand"><i id="logo" class="fas fa-dumbbell"></i></a>
        <div class="collapse navbar-collapse" id="collapse_target">
         <ul class="navbar-nav ml-auto">
+           <li class="nav-item">
+            <a href="/home" class="nav-link">Home</a>
+          </li>
           <li class="nav-item">
             <a href="/users/<%=Helpers.current_user(session).id if Helpers.is_logged_in?(session)%>" class="nav-link">My Workouts</a>
           </li>
