@@ -17,6 +17,8 @@
 
 <% if Helpers.current_user(session) == @user %>
 
+<%# Complete Profile button here if still empty %>
+
 <a href="/profiles/<%=@user.id%>/edit"><button id="edit">Edit Profile</button></a>
 
 <form href="/profiles/<%=@user.id%>/delete" method="post">

@@ -8,4 +8,8 @@ class Helpers
     !!session[:user_id]
   end
 
+  def self.completed_profile?(session)
+    
+  end
+
 end

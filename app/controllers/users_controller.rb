@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     if Helpers.is_logged_in?(session)
     @users = User.all 
     else 
-      redirect to '/'
+      redirect to '/home'
     end 
 
     erb :'users/index'
@@ -70,30 +70,30 @@ class UsersController < ApplicationController
     redirect to '/'
   end
 
-  get 'users/:id/edit' do
+  get 'profiles/:id/edit' do
     @user = User.find_by(id: params[:id]) 
     if !Helpers.is_logged_in?(session) || !@user || @user != Helpers.current_user(session) 
       redirect '/'
     end
-    erb :'/workouts/edit'
+    erb :'/users/edit'
   end
 
   patch '/users/:id' do 
-    workout = Workout.find_by(id: params[:id])
-    if workout && workout.user == Helpers.current_user(session) 
-      workout.update(params[:workout])
-      redirect to "/workouts/#{workout.id}"
+    user = User.find_by(id: params[:id])
+    if user == Helpers.current_user(session) 
+      user.update(params[:user])
+      redirect to "/profile"
     else 
-      redirect to "/workouts"
+      redirect to "/users"
     end 
   end
 
   delete '/users/:id/delete' do 
-    workout = Workout.find_by(id: params[:id])
-    if workout && workout.user == Helpers.current_user(session) 
-      workout.destroy 
+    user = User.find_by(id: params[:id])
+    if user == Helpers.current_user(session) 
+      user.destroy 
     end
-    redirect to '/workouts'
+    redirect to '/'
   end
 
 end
