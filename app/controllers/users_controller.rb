@@ -42,7 +42,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id 
       redirect to "/home"
     else 
-      flash[:error] = "You need to have an account to Log In"
+      flash[:danger] = "You need to have an account to Log In"
       redirect to '/'
     end
   end
