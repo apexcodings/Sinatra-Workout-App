@@ -19,7 +19,7 @@
 
 <%# Complete Profile button here if still empty %>
 
-<a href="/profiles/<%=@user.id%>/edit"><button id="edit">Edit Profile</button></a>
+<a href="/users/<%=@user.id%>/edit"><button id="edit">Edit Profile</button></a>
 
 <form href="/profiles/<%=@user.id%>/delete" method="post">
 <input type="hidden" name="_method" value="delete">

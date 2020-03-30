@@ -35,7 +35,7 @@ class WorkoutsController < ApplicationController
     erb :'workouts/show'
   end
 
-  get 'workouts/:id/edit' do
+  get '/workouts/:id/edit' do
     @workout = Workout.find_by(id: params[:id]) 
     if !Helpers.is_logged_in?(session) || !@workout || @workout.user != Helpers.current_user(session) 
       redirect '/'

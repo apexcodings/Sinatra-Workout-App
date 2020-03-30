@@ -5,7 +5,7 @@
 
 <div class="container">
 <section>
-<form action="/workouts/<%=@user.id%>" method="post">
+<form action="/users/<%=@user.id%>" method="post">
   <input type="hidden" name="_method" value="patch">
   <label >Exoerience Level </label>
   <input type="text" name="user[experience_level]" value="<%=@user.experience_level%>"> <br>
@@ -17,7 +17,7 @@
   <input type="text" name="user[weight]" value="<%=@user.weight%>"> <br>
   <label >Location </label>
   <input type="text" name="user[location]" value="<%=@user.location%>"> <br>
-  <input type="submit" value="Edit Profile">
+  <input type="submit" value="Update Profile">
 
 </form>
 </section>

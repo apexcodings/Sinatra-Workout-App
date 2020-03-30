@@ -70,7 +70,7 @@ class UsersController < ApplicationController
     redirect to '/'
   end
 
-  get 'profiles/:id/edit' do
+  get '/users/:id/edit' do
     @user = User.find_by(id: params[:id]) 
     if !Helpers.is_logged_in?(session) || !@user || @user != Helpers.current_user(session) 
       redirect '/'
