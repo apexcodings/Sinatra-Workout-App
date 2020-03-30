@@ -143,3 +143,11 @@ ul {
 #siteIntro {
   font-size: 18px;
 }
+
+#flashMessage {
+  color: coral;
+  text-align: center;
+  background: black;
+  opacity: 1;
+  font-size: 30px;
+}

@@ -11,6 +11,13 @@
 
 </head>
 <body>
+   <% flash.keys.each do |type| %>
+  <div id="flashMessage" data-alert class="flash <%= type %> alert-box radius">
+    <%= flash[type] %>
+    <a id="close">&times;</a>
+  </div>
+  <% end %>
+
    <% if Helpers.is_logged_in?(session) %>
       <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 
