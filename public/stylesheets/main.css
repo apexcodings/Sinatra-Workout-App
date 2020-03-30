@@ -143,3 +143,11 @@ ul {
 #siteIntro {
   font-size: 18px;
 }
+
+#flashMessage {
+  text-align: center;
+}
+
+.close {
+  margin-right: 10vw;
+}
