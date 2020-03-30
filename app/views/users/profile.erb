@@ -21,7 +21,7 @@
 
 <a href="/users/<%=@user.id%>/edit"><button id="edit">Edit Profile</button></a>
 
-<form href="/profiles/<%=@user.id%>/delete" method="post">
+<form href="/users/<%=@user.id%>/delete" method="post">
 <input type="hidden" name="_method" value="delete">
 <input id="delete" type="submit" value="Delete Profile">
 </form>
