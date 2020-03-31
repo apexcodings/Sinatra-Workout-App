@@ -19,22 +19,6 @@ class UsersController < ApplicationController
     erb :'users/profile'
   end
 
-  get '/signup' do 
-    if Helpers.is_logged_in?(session) 
-      user = Helpers.current_user(session)
-      redirect to "/home"
-    end
-    erb :'users/signup'
-  end
-
-  get '/login' do 
-    if Helpers.is_logged_in?(session) 
-      user = Helpers.current_user(session)
-      redirect to "/home"
-    end
-    erb :'users/login'
-  end
-
   post '/login' do 
     user = User.find_by(username: params[:username])
 
@@ -51,9 +35,10 @@ class UsersController < ApplicationController
     user = User.create(params)
     if user.valid? 
     session[:user_id] = user.id 
+    flash[:success] = "You have succesfully created an account!"
     redirect to "/users/#{user.id}"
     else 
-      redirect to 'signup'
+      redirect to '/'
     end 
   end
 
@@ -90,7 +75,7 @@ class UsersController < ApplicationController
     end 
   end
 
-  delete '/users/:id/delete' do 
+  delete '/profile' do 
     user = User.find_by(id: params[:id])
     if user == Helpers.current_user(session) 
       user.destroy 

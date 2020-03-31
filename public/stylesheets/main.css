@@ -146,8 +146,12 @@ ul {
 
 #flashMessage {
   text-align: center;
+  width: 30vw !important;
+  z-index: 10 !important;
+  right: 35% !important;
+  position: absolute !important;
 }
 
-.close {
-  margin-right: 10vw;
+.navbar {
+  z-index: 5;
 }

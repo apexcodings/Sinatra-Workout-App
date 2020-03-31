@@ -22,8 +22,9 @@ class ApplicationController < Sinatra::Base
   get '/home' do 
     if Helpers.is_logged_in?(session) 
       @user = Helpers.current_user(session)
+      erb :home
     end
-    erb :home
+    redirect to "/"
   end
-
+ 
 end
