@@ -22,6 +22,7 @@
 <a href="/users/<%=@user.id%>/edit"><button id="edit">Edit Profile</button></a>
 
 <form href="/profile" method="post">
+<input type="hidden" name="id" value="<%= @user.id%>">
 <input type="hidden" name="_method" value="delete">
 <input id="delete" type="submit" value="Delete Profile">
 </form>

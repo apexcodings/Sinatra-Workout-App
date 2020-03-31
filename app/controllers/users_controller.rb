@@ -24,7 +24,7 @@ class UsersController < ApplicationController
 
     if user  && user.authenticate(params[:password])
       session[:user_id] = user.id 
-      redirect to "/home"
+      redirect to '/home'
     else 
       flash[:danger] = "You need to have an account to Log In"
       redirect to '/'
@@ -79,6 +79,7 @@ class UsersController < ApplicationController
     user = User.find_by(id: params[:id])
     if user == Helpers.current_user(session) 
       user.destroy 
+      session.clear
     end
     redirect to '/'
   end
