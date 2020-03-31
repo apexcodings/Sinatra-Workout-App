@@ -26,6 +26,7 @@
 <% else %>
 
 <form action="/workouts" method="post">
+ <input type="submit" value="Copy Workout">
   <input type="hidden" name="name" value="<%=@workout.name%>"> <br>
   <input type="hidden" name="description" value="<%=@workout.description%>"> <br>
   <input id="instructions" type="hidden" name="instructions" value="<%=@workout.instructions%>">
@@ -34,7 +35,7 @@
   <input type="hidden" name="experience_needed" value="<%=@workout.experience_needed%>"> <br>
  
   <input type="hidden" name="equipment_needed" value="<%=@workout.equipment_needed%>"> <br>
-  <input type="submit" value="Copy Workout">
+ 
 
 </form>
 
