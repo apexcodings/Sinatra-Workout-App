@@ -54,10 +54,11 @@ class WorkoutsController < ApplicationController
     if workout && workout.user == Helpers.current_user(session) 
       workout.update(params[:workout])
       if workout.valid? 
+        flash[:success] = "Successfully edited workout!"
         redirect to "/workouts/#{workout.id}"
       else
         flash[:warning] = "Please make sure you fill out all fields when editing!"
-        redirect to '/workouts'
+        redirect to "/workouts/#{workout.id}/edit"
       end 
     else  
       redirect to "/workouts"
