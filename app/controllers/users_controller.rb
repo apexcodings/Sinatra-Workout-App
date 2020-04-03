@@ -80,6 +80,7 @@ class UsersController < ApplicationController
     if user == Helpers.current_user(session) 
       user.destroy 
       session.clear
+      flash[:success] = "You have succesfully deleted your account!"
     end
     redirect to '/'
   end

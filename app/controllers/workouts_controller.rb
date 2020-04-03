@@ -53,8 +53,13 @@ class WorkoutsController < ApplicationController
     workout = Workout.find_by(id: params[:id])
     if workout && workout.user == Helpers.current_user(session) 
       workout.update(params[:workout])
-      redirect to "/workouts/#{workout.id}"
-    else 
+      if workout.valid? 
+        redirect to "/workouts/#{workout.id}"
+      else
+        flash[:warning] = "Please make sure you fill out all fields when editing!"
+        redirect to '/workouts'
+      end 
+    else  
       redirect to "/workouts"
     end 
   end
@@ -63,6 +68,7 @@ class WorkoutsController < ApplicationController
     workout = Workout.find_by(id: params[:id])
     if workout && workout.user == Helpers.current_user(session) 
       workout.destroy 
+      flash[:success] = "You have succesfully deleted your workout!"
     end
     redirect to '/workouts'
   end
