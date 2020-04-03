@@ -17,10 +17,16 @@ class WorkoutsController < ApplicationController
 
   post '/workouts' do 
     workout = Workout.create(params)
+    if workout.valid? 
     user = Helpers.current_user(session)
     workout.user = user 
     workout.save 
+    flash[:success] = "You have succesfully created a workout!"
     redirect to "/users/#{user.id}"
+    else 
+      flash[:danger] = "Please make sure you fill out all fields before creating your workout!"
+      redirect to '/workouts/new'
+    end 
   end
 
   get '/workouts/:id' do 
