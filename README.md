@@ -1,4 +1,4 @@
-## Sinatra full-stack web app Workout Swap
+## Sinatra Full-Stack Web App Workout Swap
 
 This is my first full-stack MVC app and has been designed to help people who want to workout at home. The idea is that most of the workouts will have minimal equipment. I hope you enjoy it!
 
