@@ -8,10 +8,15 @@ You can Clone or fork this repository and use straight away as the DB is already
 
 And then execute:
 
-\$ bundle install
+```
+bundle install
+```
+
 Then run the application by entering:
 
-\$ shotgun
+```
+shotgun
+```
 
 and a tab in your default browser will start the app at http://localhost;9393 .
 
