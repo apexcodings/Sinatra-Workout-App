@@ -26,6 +26,8 @@ Please then Sign Up with the form you see on that page and then begin to use the
 
 This app is designed to help people share home workouts. You can add your own workouts or copy others. Once added, you will see a list of all your workouts and you can edit/delete them as you please. You can also look at workouts created by other users on the site and copy them to your workouts if you wish to edit/delete them. You can also edit your profile in order to add further details about yourself. You can delete your account at any time. Logout by clicking the logout button top left. Make sure to remember your account details so that you can log back in later!
 
+You can see a more detailed description/usage of the app by watching the following [Youtube Video](https://youtu.be/Ms1y3vsx2YU).
+
 ## License
 
-The app is available as open source under the terms of the MIT License.
+The app is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
