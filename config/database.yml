@@ -1,0 +1,11 @@
+development:
+  adapter: sqlite3
+  database: workout-dev
+  pool: 5
+
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: workout
+  pool: 5
